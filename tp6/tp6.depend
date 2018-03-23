@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1446667744 source:z:\c++\tp6\main.cpp
+	<iostream>
+
+1521306683 source:c:\users\ailiganon\desktop\usb\bts\pinaud\tp6\main.cpp
+	<iostream>
+	"CSurveillanceMesure.h"
+	<cstdlib>
+
+1521304605 source:c:\users\ailiganon\desktop\usb\bts\pinaud\tp6\src\csurveillancemesure.cpp
+	<iostream>
+	"CSurveillanceMesure.h"
+
+1521306304 c:\users\ailiganon\desktop\usb\bts\pinaud\tp6\include\csurveillancemesure.h
+
+1521741584 source:e:\tp6\main.cpp
+	<iostream>
+	"CSurveillanceMesure.h"
+	<cstdlib>
+
+1521740542 e:\tp6\include\csurveillancemesure.h
+
+1521791630 source:e:\tp6\src\csurveillancemesure.cpp
+	<iostream>
+	"CSurveillanceMesure.h"
+	<cstdlib>
+
