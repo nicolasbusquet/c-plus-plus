@@ -20,6 +20,8 @@ class CSurveillanceMesure
     private:
         float tabMesures[10];
         int nbMesures;
+        void tritableau;
+
 };
 
 #endif // CSURVEILLANCEMESURE_H
