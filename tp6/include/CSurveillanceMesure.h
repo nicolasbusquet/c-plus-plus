@@ -20,7 +20,7 @@ class CSurveillanceMesure
     private:
         float tabMesures[10];
         int nbMesures;
-        void tritableau;
+        void tritableau();
 
 };
 

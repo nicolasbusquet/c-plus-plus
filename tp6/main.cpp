@@ -68,8 +68,8 @@ int main()
                     cout << "mediane = "<< mediane << endl;
                     cout << "" << endl;
                     break;
-            case 7: gliss = mesure.moyenneGlissante();
-                    cout << "moyenne glissante = "<<  << endl;
+            case 7: gliss = mesure.moyenneGlissante(moyenne, 10, 0);
+                    cout << "moyenne glissante = "<< moyenne << endl;
                     cout << "" << endl;
                     break;
             case 8: mesure.affichemesures();

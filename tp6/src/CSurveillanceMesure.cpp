@@ -102,6 +102,8 @@ while (i < this->nbMesures)
 
 void CSurveillanceMesure::tritableau()
 {
+    int i = 0;
+    float temp;
 
         while (i < (this->nbMesures-1))
         {
@@ -113,14 +115,11 @@ void CSurveillanceMesure::tritableau()
                    }
                 i++;
         }
-    }
-    i = 0;
 }
 
 float CSurveillanceMesure::mediane()
 {
     int i = 0;
-    float temp;
     float tab[10];
     float mediane;
     int help;
@@ -131,6 +130,7 @@ float CSurveillanceMesure::mediane()
         i++;
     }
     i = 0;
+    this->tritableau();
 
     if(this->nbMesures%2 == 0)
     {
@@ -151,7 +151,10 @@ float CSurveillanceMesure::mediane()
     return mediane;
 
 }
-
+bool CSurveillanceMesure::moyenneGlissante(float &moyenne, int nbvaleurs, int indiceMesure1)
+{
+    return false;
+}
 void CSurveillanceMesure::affichemesures()
 {
     system("cls");
