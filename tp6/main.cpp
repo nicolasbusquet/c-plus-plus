@@ -46,6 +46,7 @@ int main()
             case 1:  verif = mesure.mesurer();
                      while (verif==false)
                         {
+                            cout << "mesure echouee" << endl;
                             verif = mesure.mesurer();
                         }
                     system("cls");
