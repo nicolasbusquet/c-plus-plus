@@ -153,7 +153,15 @@ float CSurveillanceMesure::mediane()
 }
 bool CSurveillanceMesure::moyenneGlissante(float &moyenne, int nbvaleurs, int indiceMesure1)
 {
-    return false;
+    float somme = 0;
+    int i = indiceMesure1-1;
+    while (i<nbvaleurs)
+    {
+        somme = this->tabMesures[i] + somme;
+        i++;
+    }
+    moyenne = somme / nbvaleurs;
+    return true;
 }
 void CSurveillanceMesure::affichemesures()
 {
