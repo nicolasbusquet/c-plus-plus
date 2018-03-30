@@ -6,7 +6,6 @@ using namespace std;
 int main()
 {
     CSurveillanceMesure mesure(-1);
-    int i = 0;
     int t;
     bool verif;
     float dernval;
@@ -17,19 +16,18 @@ int main()
     int nbmesur;
     int indice;
     bool gliss;
+
+    verif = mesure.mesurer();
+    while (verif==false)
+        {
+            cout << "mesure echouee, entrez une nouvelle mesure" << endl;
+            verif = mesure.mesurer();
+        }
+
     while (1)
     {
-        if (i==0)
-        {
-            verif = mesure.mesurer();
-            while (verif==false)
-            {
-                cout << "mesure echouee, entrez une nouvelle mesure" << endl;
-               verif = mesure.mesurer();
-            }
-            i = 1;
-            system("cls");
-        }
+        system("cls");
+
         cout << "1: effectuer une mesure" << endl;
         cout << "2: afficher la derniere valeur mesuree" << endl;
         cout << "3: afficher la valeur minimale" << endl;
@@ -58,7 +56,7 @@ int main()
             case 3: minimum = mesure.valMin();
                     cout << "minimum = " << minimum << endl;
                     cout << "" << endl;
-                    break;system("cls");
+                    break;
             case 4: maximum = mesure.valMax();
                     cout << "maximum = " << maximum << endl;
                     cout << "" << endl;

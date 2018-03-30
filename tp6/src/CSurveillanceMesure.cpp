@@ -122,15 +122,15 @@ float CSurveillanceMesure::mediane()
     int i = 0;
     float tab[10];
     float mediane;
-    int help;
+    //int test;
 
     while(i<10)
     {
         tab[i] = this->tabMesures[i];
         i++;
     }
-    i = 0;
-    this->tritableau();
+
+    tritableau();
 
     if(this->nbMesures%2 == 0)
     {
@@ -139,10 +139,9 @@ float CSurveillanceMesure::mediane()
     }
     else
     {
-       help = (this->nbMesures/2);
-       mediane = this->tabMesures[help];
+       mediane  = this->tabMesures[(this->nbMesures-1)/2];
     }
-
+    i = 0;
     while(i<10)
     {
         this->tabMesures[i] = tab[i];
