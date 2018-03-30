@@ -26,8 +26,6 @@ int main()
 
     while (1)
     {
-        system("cls");
-
         cout << "1: effectuer une mesure" << endl;
         cout << "2: afficher la derniere valeur mesuree" << endl;
         cout << "3: afficher la valeur minimale" << endl;
@@ -47,7 +45,6 @@ int main()
                             cout << "mesure echouee" << endl;
                             verif = mesure.mesurer();
                         }
-                    system("cls");
                     break;
             case 2: dernval = mesure.valMesuree();
                     cout << "derniere valeur mesuree = " << dernval << endl;

@@ -37,6 +37,7 @@ bool CSurveillanceMesure::mesurer()
     {
         this->tabMesures[this->nbMesures] = n;
         this->nbMesures = this->nbMesures + 1;
+        system("cls");
         return true;
     }
     return false;
@@ -107,14 +108,18 @@ void CSurveillanceMesure::tritableau()
 
         while (i < (this->nbMesures-1))
         {
-            if(this->tabMesures[i+1] < this->tabMesures[i])
+            if(this->tabMesures[i] > this->tabMesures[i+1])
                    {
                        temp = this->tabMesures[i];
                        this->tabMesures[i] = this->tabMesures[i+1];
                        this->tabMesures[i+1] = temp;
                    }
+                   cout << this->tabMesures[i] << endl;
                 i++;
+
         }
+        cout << this->tabMesures[i] << endl;
+        cin >> i;
 }
 
 float CSurveillanceMesure::mediane()
@@ -122,13 +127,14 @@ float CSurveillanceMesure::mediane()
     int i = 0;
     float tab[10];
     float mediane;
-    //int test;
 
     while(i<10)
     {
         tab[i] = this->tabMesures[i];
+        cout << this->tabMesures[i] << endl;
         i++;
     }
+    cout << "" << endl;
 
     tritableau();
 
