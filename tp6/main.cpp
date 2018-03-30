@@ -66,18 +66,19 @@ int main()
                     cout << "mediane = "<< mediane << endl;
                     cout << "" << endl;
                     break;
-            case 7: cout << "************************** AFFICHAGE DES MESURES **************************" << endl;
-                    cout << "" << endl;
-                    mesure.affichemesures();
-                    cout << "" << endl;
-                    cout << "saisissez le nombre de mesures sur lesquels faire la moyenne" << endl;
+            case 7: cout << "saisissez le nombre de mesures sur lesquels faire la moyenne" << endl;
                     cin >> nbmesur;
                     cout << "saisissez le numero de la mesure a partir duquel vous souhaitez effectuer la moyenne" << endl;
                     cin >> indice;
                     gliss = mesure.moyenneGlissante(moyenne, nbmesur, indice);
                     while(gliss == false)
                     {
-                        gliss = mesure.moyenneGlissante(moyenne, nbmesur, indice);
+                        cout << "fatal error, resaisissez vos valeurs" << endl;
+                        cout << "saisissez le nombre de mesures sur lesquels faire la moyenne" << endl;
+                        cin >> nbmesur;
+                        cout << "saisissez le numero de la mesure a partir duquel vous souhaitez effectuer la moyenne" << endl;
+                        cin >> indice;
+                        gliss = mesure.moyenneGlissante(moyenne=-1, nbmesur, indice);
                     }
                     cout << "moyenne glissante = "<< moyenne << endl;
                     cout << "" << endl;
