@@ -103,22 +103,34 @@ while (i < this->nbMesures)
 
 void CSurveillanceMesure::tritableau()
 {
+    float tmp;
     int i = 0;
-    float temp;
+    int j = 0;
 
+
+    while (j < this->nbMesures-1)
+    {
         while (i < (this->nbMesures-1))
         {
             if(this->tabMesures[i] > this->tabMesures[i+1])
                    {
-                       temp = this->tabMesures[i];
+                       tmp = this->tabMesures[i];
                        this->tabMesures[i] = this->tabMesures[i+1];
-                       this->tabMesures[i+1] = temp;
-                   }
-                   cout << this->tabMesures[i] << endl;
+                       this->tabMesures[i+1] = tmp;
+                    }
                 i++;
-
         }
-        cout << this->tabMesures[i] << endl;
+        i = 0;
+        j++;
+    }
+
+        cout << "" << endl;
+        i = 0;
+        while (i<10)
+    {
+        cout << "valeur numero " << i+1 << " = " << this->tabMesures[i] << endl;
+        i++;
+    }
         cin >> i;
 }
 
